@@ -1,3 +1,5 @@
+# ！无法使用！
+
 # What is it
 Automated workflow for GitHub Actions which builds Aseprite for Windows, Linux, macOS.</br>
 By using GitHub actions there is no need for manual compilation and it does not contain malware.</br>
