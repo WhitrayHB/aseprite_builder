@@ -93,7 +93,7 @@ jobs:
       - name: (Windows) Set architecture for the produced binary
         if: matrix.os == 'windows-latest'
         shell: cmd
-        run: VsDevCmd.bat -arch=x64
+        run: call "'D:\a\aseprite_builder\aseprite_builder\VsDevCmd.bat" -arch=x64
       - name: (Windows) Setting Visual Studio build environment variables and paths
         if: matrix.os == 'windows-latest'
         uses: seanmiddleditch/gha-setup-vsdevenv@master
