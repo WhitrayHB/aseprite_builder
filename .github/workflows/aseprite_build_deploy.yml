@@ -93,7 +93,7 @@ jobs:
       - name: (Windows) Set Path for running bat
         if: matrix.os == 'windows-latest'
         shell: cmd
-        run: set PATH=C:\Windows\System32;%PATH%
+        run: set PATH=C:\Windows\System32;%SystemRoot%;%SystemRoot%\System32\Wbem;%PATH%
       - name: (Windows) Set architecture for the produced binary
         if: matrix.os == 'windows-latest'
         shell: cmd
