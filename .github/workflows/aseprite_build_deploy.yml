@@ -90,6 +90,10 @@ jobs:
           curl -o Aseprite-source.zip -L ${{ needs.check-version.outputs.download_url }}
           unzip Aseprite-source.zip -d aseprite
           mkdir -p aseprite/build
+      - name: (Windows) Set Path for running bat
+        if: matrix.os == 'windows-latest'
+        shell:cmd
+        run: set PATH=C:\Windows\System32;%PATH%
       - name: (Windows) Set architecture for the produced binary
         if: matrix.os == 'windows-latest'
         shell: cmd
