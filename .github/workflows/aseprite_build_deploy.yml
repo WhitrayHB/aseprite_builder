@@ -92,7 +92,8 @@ jobs:
           mkdir -p aseprite/build
       - name: (Windows) Set Path for running bat
         if: matrix.os == 'windows-latest'
-        run: actions/checkout@master
+        shell: cmd
+        run: cd
       - name: (Windows) Set architecture for the produced binary
         if: matrix.os == 'windows-latest'
         shell: cmd
